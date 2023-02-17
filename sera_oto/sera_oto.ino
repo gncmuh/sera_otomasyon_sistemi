@@ -229,19 +229,21 @@ void otomasyon_baslatma(void) {
 
     if(sicaklik<=sera_sicaklik)
     {
-      bitWrite(PORTD,3,HIGH);
+      bitWrite(PORTD,3,LOW);
     }
     else if(sicaklik>=sera_sicaklik)
     {
-      bitWrite(PORTD,3,LOW);
+      bitWrite(PORTD,3,HIGH);
     }
     if(nem<=sera_nem)
     {
       bitWrite(PORTD,5,HIGH);
+      bitWrite(PORTD,3,LOW);
     }
     else if(nem>=sera_nem)
     {
       bitWrite(PORTD,5,LOW);
+      bitWrite(PORTD,3,HIGH);
     }
 //    if(t_nem<=toprak_nem)
 //    {
